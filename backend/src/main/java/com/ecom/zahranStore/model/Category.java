@@ -16,7 +16,7 @@ import lombok.Data;
 @Data 
 public class Category {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
     private String name;
 
