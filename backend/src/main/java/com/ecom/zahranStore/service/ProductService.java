@@ -17,6 +17,11 @@ public class ProductService {
     }
 
     public List<Product> getProductByCategoryId(UUID categoryId) {
-        return productRepository.FindByCategoryId(categoryId);
+        return productRepository.findByCategoryId(categoryId);
     }
+
+    public List<Product> getAllProducts() {
+        return productRepository.findAll();
+    }
+  
 }

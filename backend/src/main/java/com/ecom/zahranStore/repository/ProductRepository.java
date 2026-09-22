@@ -11,6 +11,6 @@ import com.ecom.zahranStore.model.Product;
 
 @Repository 
 public interface ProductRepository extends JpaRepository<Product, UUID> {
-    List<Product> FindByCategoryId(UUID categoryId);
+    List<Product> findByCategoryId(UUID categoryId);
 
 }
