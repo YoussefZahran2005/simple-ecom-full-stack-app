@@ -12,6 +12,8 @@ import java.util.List;
 @Component
 public class DataSeeder implements CommandLineRunner {
 
+    private static final String PLACEHOLDER_IMAGE_URL = "https://picsum.photos/seed/zahranstore/500/500";
+
     private final ProductRepository productRepository;
     private final CategoryRepository categoryRepository;
 
@@ -22,7 +24,6 @@ public class DataSeeder implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        // clear all existing data when starting
         productRepository.deleteAll();
         categoryRepository.deleteAll();
 
@@ -36,25 +37,25 @@ public class DataSeeder implements CommandLineRunner {
         // --- products ---
         List<Product> products = List.of(
                 createProduct("Wireless Headphones", "Over-ear Bluetooth headphones with noise cancellation",
-                        "https://example.com/images/headphones.jpg", 79.99, electronics),
+                        PLACEHOLDER_IMAGE_URL, 79.99, electronics),
                 createProduct("Smartphone Stand", "Adjustable aluminum stand for phones and tablets",
-                        "https://example.com/images/phone-stand.jpg", 15.99, electronics),
+                        PLACEHOLDER_IMAGE_URL, 15.99, electronics),
                 createProduct("4K Monitor", "27-inch UHD monitor with HDR support",
-                        "https://example.com/images/monitor.jpg", 249.99, electronics),
+                        PLACEHOLDER_IMAGE_URL, 249.99, electronics),
 
                 createProduct("Men's T-Shirt", "100% cotton crew neck t-shirt",
-                        "https://example.com/images/tshirt.jpg", 12.99, clothing),
+                        PLACEHOLDER_IMAGE_URL, 12.99, clothing),
                 createProduct("Women's Denim Jacket", "Classic fit denim jacket",
-                        "https://example.com/images/denim-jacket.jpg", 45.99, clothing),
+                        PLACEHOLDER_IMAGE_URL, 45.99, clothing),
                 createProduct("Running Shoes", "Lightweight breathable running shoes",
-                        "https://example.com/images/running-shoes.jpg", 59.99, clothing),
+                        PLACEHOLDER_IMAGE_URL, 59.99, clothing),
 
                 createProduct("Non-Stick Frying Pan", "10-inch non-stick frying pan with ergonomic handle",
-                        "https://example.com/images/frying-pan.jpg", 22.99, homeAndKitchen),
+                        PLACEHOLDER_IMAGE_URL, 22.99, homeAndKitchen),
                 createProduct("Electric Kettle", "1.7L stainless steel electric kettle",
-                        "https://example.com/images/kettle.jpg", 34.99, homeAndKitchen),
+                        PLACEHOLDER_IMAGE_URL, 34.99, homeAndKitchen),
                 createProduct("Ceramic Dinner Set", "16-piece ceramic dinnerware set",
-                        "https://example.com/images/dinner-set.jpg", 89.99, homeAndKitchen)
+                        PLACEHOLDER_IMAGE_URL, 89.99, homeAndKitchen)
         );
 
         productRepository.saveAll(products);
