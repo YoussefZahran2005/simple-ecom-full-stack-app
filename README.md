@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛍️ zahranStore
+# Simple E-Commerce Web App 
 
 **A layered Spring Boot backend, paired with a minimal dark-mode React storefront.**
 
@@ -15,7 +15,7 @@
 
 ## Overview
 
-zahranStore is a small e-commerce catalog built to properly connect a Spring Boot backend to a React frontend — end to end, for real, no shortcuts. It started from an **EmbarkX** tutorial, but diverged early: several practices from the original walkthrough were reworked to fit tighter backend conventions, and the frontend was built independently, without following any tutorial for it.
+This is a small e-commerce catalog built to properly connect a Spring Boot backend to a React frontend — end to end, for real, no shortcuts. It started from an **EmbarkX** tutorial, but diverged early: several practices from the original walkthrough were reworked to fit tighter backend conventions, and the frontend was built independently, without following any tutorial for it.
 
 Right now, it's a **read-only product catalog**: categories and products are seeded into MySQL on startup, served through a REST API, and rendered in a clean, dark, distraction-free UI. This first version is complete — the frontend and backend are properly linked and working end to end — though it may see further updates down the line. The roadmap below outlines what those could look like.
 
@@ -23,11 +23,11 @@ Right now, it's a **read-only product catalog**: categories and products are see
 
 ## Features
 
-- 📦 Browse all products, or filter by category
-- 🗄️ Data persisted in MySQL via Spring Data JPA
-- 🌱 Automatic seeding of sample categories and products on startup
-- 🌐 REST API consumed by a separate React frontend over CORS
-- 🌙 Minimal, dark-mode-first UI — built for readability, not flash
+-  Browse all products, or filter by category
+-  Data persisted in MySQL via Spring Data JPA
+-  Automatic seeding of sample categories and products on startup
+-  REST API consumed by a separate React frontend over CORS
+-  Minimal, dark-mode-first UI — built for readability, not flash
 
 ---
 
